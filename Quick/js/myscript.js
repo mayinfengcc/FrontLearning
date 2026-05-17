@@ -1,0 +1,1 @@
+console.log('hello js的外联')

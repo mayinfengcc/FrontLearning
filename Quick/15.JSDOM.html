@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div id="box1">这是一个id标签</div>
+    <div class="box2">这是一个类标签</div>
+    <div>这是一个普通标签</div>
+    <button>button按钮demo</button>
+    <script>
+        let element_name = document.getElementById('box1');
+        console.log(element_name);
+        element_name.innerHTML = 'ID修改';
+        let button_test = document.getElementsByTagName('button')[0]
+        console.log(button_test);
+        button_test.onclick = function(){
+            alert('按键触发');
+        }
+    </script>
+</body>
+</html>
