@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表格标签</title>
+</head>
+
+<body>
+  <h2>表格标签基本用法</h2>
+  <table border="1">
+    <tr>
+      <td>姓名</td>
+      <td>年龄</td>
+      <td>成绩</td>
+    </tr>
+    <tr>
+      <td>张三</td>
+      <td>18</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>李四</td>
+      <td>19</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td>王五</td>
+      <td>20</td>
+      <td>95</td>
+    </tr>
+  </table>
+  <table border="1">
+    <tr>
+      <!-- th一般用于第一行/列 水平居中 -->
+      <th>姓名</th>
+      <th>年龄</th>
+      <th>成绩</th>
+    </tr>
+    <tr>
+      <td>张三</td>
+      <td>18</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>李四</td>
+      <td>19</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td>王五</td>
+      <td>20</td>
+      <td>95</td>
+    </tr>
+  </table>
+  <h2>表格结构标签</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>成绩</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>张三</td>
+        <td>18</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>李四</td>
+        <td>19</td>
+        <td>85</td>
+      </tr>
+      <tr>
+        <td>王五</td>
+        <td>20</td>
+        <td>95</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>跨行跨列合并案例 - 课程表</h2>
+  <table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+      <tr>
+        <!-- colspan="7" 横向合并7列 -->
+        <th colspan="7">2025年春季学期课程表</th>
+      </tr>
+      <tr>
+        <th>时间</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+        <th>星期六</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>上午</td>
+        <td>语文</td>
+        <td>数学</td>
+        <td>英语</td>
+        <td>物理</td>
+        <td>化学</td>
+        <td rowspan="2">自习</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>数学</td>
+        <td>英语</td>
+        <td>物理</td>
+        <td>化学</td>
+        <td>语文</td>
+        <!-- 这里省略，因为上面 rowspan="2" 占了这个格子 -->
+      </tr>
+      <tr>
+        <!-- rowspan="2" 纵向合并2行 -->
+        <td rowspan="2">下午</td>
+        <td>体育</td>
+        <td>音乐</td>
+        <td>美术</td>
+        <td>体育</td>
+        <td>音乐</td>
+        <td>放学</td>
+      </tr>
+      <tr>
+        <td>班会</td>
+        <td>自习</td>
+        <td>自习</td>
+        <td>自习</td>
+        <td>班会</td>
+        <td></td>
+      </tr>
+      <tr>
+        <!-- colspan="2" 横向合并2列，rowspan="2" 纵向合并2行 -->
+        <td rowspan="2" colspan="2">社团活动</td>
+        <td colspan="4">社团活动</td>
+        <td rowspan="2">放假</td>
+      </tr>
+      <tr>
+        <td colspan="2">体育锻炼</td>
+        <td colspan="2">兴趣小组</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
